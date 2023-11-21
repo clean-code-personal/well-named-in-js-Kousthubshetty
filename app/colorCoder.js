@@ -26,10 +26,10 @@ function getColorFromPairNumber(pairNumber){
     let zeroBasedPairNumber = pairNumber - 1;
     let majorIndex = parseInt (zeroBasedPairNumber / minorSize);
     let minorIndex = parseInt(zeroBasedPairNumber % minorSize);
-	let  pair = new colorPair();
-	pair.majorColor = majorColorNames[majorIndex];
-	pair.minorColor = minorColorNames[minorIndex];
-	return pair;
+    let  pair = new colorPair();
+    pair.majorColor = majorColorNames[majorIndex];
+    pair.minorColor = minorColorNames[minorIndex];
+    return pair;
 }
 
 function getPairNumberFromColor(pair){
