@@ -12,18 +12,18 @@ function colorPair(){
 }
 
 colorPair.prototype.toString=function(){
-	return `MajorColor:${this.majorColor},MinorColor:${this.minorColor}`;
+    return `MajorColor:${this.majorColor},MinorColor:${this.minorColor}`;
 }
 
 function getColorFromPairNumber(pairNumber){
-	let minorSize = majorColorNames.length;
-	let majorSize = minorColorNames.length;
-	
-	if (pairNumber < 1 || pairNumber > minorSize * majorSize)
- 	{
- 		throw `Argument PairNumber:${pairNumber} is outside the allowed range` 
-	}
-	let zeroBasedPairNumber = pairNumber - 1;
+    let minorSize = majorColorNames.length;
+    let majorSize = minorColorNames.length;
+        
+    if (pairNumber < 1 || pairNumber > minorSize * majorSize)
+    {
+        throw `Argument PairNumber:${pairNumber} is outside the allowed range` 
+    }
+    let zeroBasedPairNumber = pairNumber - 1;
     let majorIndex = parseInt (zeroBasedPairNumber / minorSize);
     let minorIndex = parseInt(zeroBasedPairNumber % minorSize);
 	let  pair = new colorPair();
@@ -45,7 +45,7 @@ function getPairNumberFromColor(pair){
 
 function getAllPairs(){
     let pairCount=1
-    
+
     for (let majorColor of majorColorNames){
         for (let minorColor of minorColorNames){
             console.log(`Pair Number[${pairCount}]: {${majorColor},${minorColor}}`)
