@@ -33,8 +33,8 @@ function getColorFromPairNumber(pairNumber){
 }
 
 function getPairNumberFromColor(pair){
-    majorIndex=majorColorNames.indexOf(pair.majorColor)
-    minorIndex=minorColorNames.indexOf(pair.minorColor)
+    let majorIndex=majorColorNames.indexOf(pair.majorColor)
+    let minorIndex=minorColorNames.indexOf(pair.minorColor)
 
     if (majorIndex == -1 || minorIndex == -1)
     {
@@ -45,6 +45,7 @@ function getPairNumberFromColor(pair){
 
 function getAllPairs(){
     let pairCount=1
+    
     for (let majorColor of majorColorNames){
         for (let minorColor of minorColorNames){
             console.log(`Pair Number[${pairCount}]: {${majorColor},${minorColor}}`)
