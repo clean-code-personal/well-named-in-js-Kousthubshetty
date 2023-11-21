@@ -1,4 +1,3 @@
-
 const majorColorNames = [
     "WHITE", "RED", "BLACK", "YELLOW", "VIOLET"
 ];
@@ -10,7 +9,6 @@ function colorPair(){
     this.majorColor;
     this.minorColor;
 }
-
 colorPair.prototype.toString=function(){
     return `MajorColor:${this.majorColor},MinorColor:${this.minorColor}`;
 }
@@ -18,7 +16,6 @@ colorPair.prototype.toString=function(){
 function getColorFromPairNumber(pairNumber){
     let minorSize = majorColorNames.length;
     let majorSize = minorColorNames.length;
-        
     if (pairNumber < 1 || pairNumber > minorSize * majorSize)
     {
         throw `Argument PairNumber:${pairNumber} is outside the allowed range` 
@@ -35,7 +32,6 @@ function getColorFromPairNumber(pairNumber){
 function getPairNumberFromColor(pair){
     let majorIndex=majorColorNames.indexOf(pair.majorColor)
     let minorIndex=minorColorNames.indexOf(pair.minorColor)
-
     if (majorIndex == -1 || minorIndex == -1)
     {
         throw `Unknown Colors:${pair.toString()}`;
@@ -45,7 +41,6 @@ function getPairNumberFromColor(pair){
 
 function getAllPairs(){
     let pairCount=1
-
     for (let majorColor of majorColorNames){
         for (let minorColor of minorColorNames){
             console.log(`Pair Number[${pairCount}]: {${majorColor},${minorColor}}`)
@@ -87,5 +82,5 @@ function test(){
     console.log(`[In]Colors: ${testPair2}, [Out] PairNumber: ${pairNumber}`);
     console.assert(pairNumber==6);
 }
-getAllPairs(); 
-test();
+getAllPairs();
+test()
