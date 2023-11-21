@@ -3,7 +3,7 @@ const majorColorNames = [
     "WHITE", "RED", "BLACK", "YELLOW", "VIOLET"
 ];
 const minorColorNames = [
-	"BLUE", "ORANGE", "GREEN", "BROWN", "SLATE"
+    "BLUE", "ORANGE", "GREEN", "BROWN", "SLATE"
 ];
 
 function colorPair(){
